@@ -6,7 +6,7 @@ export async function onRequest(context) {
   }
 
   try {
-    // 2. 解析表单数据（支持 application/x-www-form-urlencoded 或 JSON）
+    // 2. 解析表单数据
     let formData;
     const contentType = context.request.headers.get('content-type');
     if (contentType.includes('application/json')) {
@@ -16,7 +16,7 @@ export async function onRequest(context) {
       formData = Object.fromEntries(form.entries());
     }
 
-    // 3. 提取字段（与 contact.html 中的 name 属性对应）
+    // 3. 提取字段
     const { name, email, phone, company, subject, message } = formData;
 
     // 简单验证
@@ -28,8 +28,14 @@ export async function onRequest(context) {
     }
 
     // 4. 发送邮件（使用 Resend）
-    // 你需要先注册 Resend 并获取 API Key
-    const RESEND_API_KEY = context.env.RESEND_API_KEY;  // 从环境变量读取
+    const RESEND_API_KEY = context.env.RESEND_API_KEY;
+    if (!RESEND_API_KEY) {
+      return new Response(JSON.stringify({ error: '服务器配置错误：缺少 API Key' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     const emailResult = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -37,8 +43,8 @@ export async function onRequest(context) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: '你的验证过的发件邮箱 <onboarding@resend.dev>', // 测试阶段可以用 onboarding@resend.dev
-        to: ['mark.w@lerextrading.com'],   // 你的接收邮箱
+        from: 'onboarding@resend.dev',   // 测试用，正式上线后改为你的验证域名
+        to: ['mark.w@lerextrading.com'],
         reply_to: email,
         subject: `[网站联系表单] ${subject}`,
         html: `
@@ -63,11 +69,11 @@ export async function onRequest(context) {
       });
     }
 
-    // 5. 返回成功响应（重定向到感谢页）
+    // 5. 成功：重定向到感谢页
     return new Response(null, {
       status: 302,
       headers: {
-        'Location': '/thanks.html'   // 你需要创建这个页面
+        'Location': '/thanks.html'
       }
     });
 
