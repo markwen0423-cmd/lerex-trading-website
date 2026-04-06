@@ -216,8 +216,13 @@ const translations = {
     footer_email_label: "Email",
     footer_phone_label: "Phone / WhatsApp",
     footer_addr_label: "Address",
-    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. All rights reserved."
+    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. All rights reserved.",
+        thanks_badge: "Thank You",
+    thanks_title: "Your message has been sent successfully!",
+    thanks_message: "We have received your inquiry and will get back to you within 24 hours.",
+    thanks_back_home: "Back to Home"
   },
+  
     ar: {
     // Navigation
     brand_sub: "شريك موثوق في مجال توريد قطع غيار السيارات",
@@ -435,7 +440,11 @@ story_wsbk_excerpt: "في جولة بطولة العالم للسوبربايك 
     footer_email_label: "البريد الإلكتروني",
     footer_phone_label: "الهاتف / واتساب",
     footer_addr_label: "العنوان",
-    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. جميع الحقوق محفوظة."
+    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. جميع الحقوق محفوظة.",
+    thanks_badge: "شكراً لك",
+    thanks_title: "تم إرسال رسالتك بنجاح!",
+    thanks_message: "لقد تلقينا استفسارك وسنرد عليك خلال 24 ساعة.",
+    thanks_back_home: "العودة إلى الرئيسية"
   },
     ja: {
     // Navigation
@@ -641,7 +650,11 @@ story_wsbk_excerpt: "في جولة بطولة العالم للسوبربايك 
     footer_email_label: "メール",
     footer_phone_label: "電話 / WhatsApp",
     footer_addr_label: "住所",
-    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. 無断転載を禁じます。"
+    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. 無断転載を禁じます。",
+    thanks_badge: "ありがとうございます",
+    thanks_title: "メッセージは正常に送信されました",
+    thanks_message: "お問い合わせを受け付けました。24時間以内にご返信いたします。",
+    thanks_back_home: "ホームに戻る"
   },
     de: {
     // Navigation
@@ -847,7 +860,11 @@ story_wsbk_excerpt: "في جولة بطولة العالم للسوبربايك 
     footer_email_label: "E-Mail",
     footer_phone_label: "Telefon / WhatsApp",
     footer_addr_label: "Adresse",
-    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. Alle Rechte vorbehalten."
+    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. Alle Rechte vorbehalten.",
+        thanks_badge: "Vielen Dank",
+    thanks_title: "Ihre Nachricht wurde erfolgreich gesendet!",
+    thanks_message: "Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+    thanks_back_home: "Zurück zur Startseite"
   },
     ru: {
     // Navigation
@@ -1053,7 +1070,11 @@ story_wsbk_excerpt: "في جولة بطولة العالم للسوبربايك 
     footer_email_label: "Email",
     footer_phone_label: "Телефон / WhatsApp",
     footer_addr_label: "Адрес",
-    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. Все права защищены."
+    footer_copy: "© 2026 Suzhou Lerex Trading Co., Ltd. Все права защищены.",
+        thanks_badge: "Спасибо",
+    thanks_title: "Ваше сообщение успешно отправлено!",
+    thanks_message: "Мы получили ваш запрос и ответим в течение 24 часов.",
+    thanks_back_home: "Вернуться на главную"
   }
 };
 // ==================== 文章内容数据 ====================
